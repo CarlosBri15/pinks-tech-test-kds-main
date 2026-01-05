@@ -1,0 +1,38 @@
+@import "@/styles/variables.scss";
+
+.timer {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px; 
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.normal {
+  color: $text-secondary;
+  background-color: #f0f0f0;
+}
+
+.warning {
+  color: #d97706; 
+  background-color: #fffbeb;
+  border: 1px solid #fcd34d;
+}
+
+.critical {
+  color: white;
+  background-color: $brand-red;
+  border: 1px solid $brand-red-dark;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}

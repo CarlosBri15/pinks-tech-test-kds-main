@@ -1,0 +1,24 @@
+@import "@/styles/variables.scss";
+
+.pk-kanban {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding-bottom: 12px;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $bg-dark;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bg-hover;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $brand-pink;
+  }
+}

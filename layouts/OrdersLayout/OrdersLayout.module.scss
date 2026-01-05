@@ -1,0 +1,59 @@
+@import "@/styles/variables.scss";
+
+.pk-layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-dark;
+
+  &__navbar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    background-color: $bg-panel;
+    border-bottom: 2px solid $brand-red;
+    box-shadow: $shadow-md;
+    z-index: 10;
+    gap: 16px;
+
+    span {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+      color: $brand-red-deep;
+    }
+  }
+
+  &__app {
+    flex: 1;
+    overflow: hidden;
+    padding: 24px;
+    padding-bottom: 80px; // Space for summary bar
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.soundButton {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $brand-red-deep;
+
+  &:hover {
+    background-color: $gray-900;
+  }
+}

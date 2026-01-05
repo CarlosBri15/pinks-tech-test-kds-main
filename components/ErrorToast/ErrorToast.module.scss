@@ -1,0 +1,40 @@
+@import "@/styles/variables.scss";
+
+.toast {
+  position: fixed;
+  bottom: 80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $bg-dark; // Using variable for consistency, will override with error color
+  background-color: rgb(54, 8, 8); // Dark red background
+  border: 1px solid $brand-red;
+  color: $brand-red; // Red text for warning/error feel
+  padding: 12px 24px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-lg;
+  z-index: 201; // Higher than UndoToast
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 300px;
+  text-align: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    &::before {
+      content: "⚠️";
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@keyframes popIn {
+  from { transform: translate(-50%, 50px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
